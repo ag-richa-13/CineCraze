@@ -22,7 +22,7 @@ This project is built using the following technologies:
 
 ## Screenshots
 
-![CineCraze Screenshot](./Image/ss.png)
+![CineCraze Screenshot]<img src="./Image/ss.png" alt="CineCraze Screenshot" width="400" height="300">
 
 <!-- Replace 'link_to_screenshot.png' with the actual path or URL to the screenshot -->
 
