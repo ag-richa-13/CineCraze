@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CineCraze</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../public/style.css"> -->
+    <link rel="shortcut icon" href="../Image/favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 600px;
+            height: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type='text'] {
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 0 20px;
+            padding: 10px 20px;
+            background-color: #3A4D39;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #D2E3C8;
+            color: black;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 0 35px 0 50px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        button.delete {
+            background-color: #D988B9;
+        }
+
+        button.delete:hover {
+            background-color: #FFD1DA;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input[type='text'] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CineCraze</h1>
+        <form action="/add" method="post">
+            <input type="text" name="newItem" placeholder="Add item" required>
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <% watchlist.forEach(item=> { %>
+                <li>
+                    <%= item.item %>
+                        <form action="/delete" method="post">
+                            <input type="hidden" name="id" value="<%= item.id %>">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+</body>
+
+</html>
