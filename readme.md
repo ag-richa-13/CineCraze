@@ -22,17 +22,21 @@ This project is built using the following technologies:
 
 ## Screenshots
 
-![CineCraze Screenshot]<img src="./Image/ss.png" alt="CineCraze Screenshot" width="400" height="300">
+<img src="./Image/ss.png" alt="CineCraze Screenshot" width="400" height="300">
 
 <!-- Replace 'link_to_screenshot.png' with the actual path or URL to the screenshot -->
 
 ## Demo Video
 
-[![CineCraze Demo]](./Image/demo.mp4)
+<video width="320" height="240" controls>
+  <source src="./Image/demo.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
 
 ## Logo
 
-![CineCraze Logo](./Image/logo-color.png)
+<img src="./Image/logo-color.png" alt="CineCraze Screenshot" width="400" height="300">
 
 <!-- Replace 'link_to_logo.png' with the actual path or URL to the logo -->
 
